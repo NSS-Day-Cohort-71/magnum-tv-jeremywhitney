@@ -1,3 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body, h1, h2, ul {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #121212, #1a1a1a);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #00ff84;
+  box-shadow: 0 4px 6px rgba(0, 255, 132, 0.5);
+}
+
+h1 {
+  margin: 0;
+  color: #00ff84;
+}
+
+h1:hover {
+  color: #ffffff;
+  transform: scale(1.1)
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  width: auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+article {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.detail--column {
+  flex: 1;
+  margin: 0 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #1a1a1a;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 255, 132, 0.5);
+  transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+li:hover {
+  background-color: #00ff84;
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 255, 132, 0.5);
+}
+
+li.active {
+  background-color: #00ff84;
+  color: #000;
+  box-shadow: 0 4px 8px rgba(0, 255, 132, 0.5);
+  transform: scale(1.05);
+}
+
+.details h2, .shows h2 {
+  color: #00ff84;
+  border-bottom: 1px solid #00ff84;
+  padding-bottom: 5px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.details h2:hover, .shows h2:hover {
+  color: #ffffff;
+  transform: scale(1.02);
+}
+
+.shows {
+  width: 80%;
+  padding: 10px;
+}
+
+.shows ul {
+  padding: 0;
+  margin: 0;
+}
+
+.shows ul li {
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #1a1a1a;
+  border: 1px solid #00ff84;
+  border-radius: 5px;
+}
+
+.shows ul li:hover {
+  background-color: #00ff84;
+  color: #000000;
+}
+
+li::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  padding-right: 10px;
+  color:#00ff84;
+}
+
+.details__actors ul li::before {
+  content: "\f007";
+}
+
+.details__genres ul li::before {
+  content: "\f26c";
+}
+
+.shows ul li::before {
+  content: "\f008";
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
